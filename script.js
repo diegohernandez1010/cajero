@@ -8,9 +8,8 @@ const cuentas=[
 ];
 // if (nombre==='mali' || nombre==='gera' || nombre==='maui'){console.log("datos correctos")}
 if ( nombre=='mali' && contraseña==1 || nombre=='gera'&& contraseña==2 || nombre=='maui' && contraseña==3){console.log("datos correctos")}
-else if ( contraseña !== nombre){console.log("contraseña incorrecta")}
-else if (){console.log('p')}
-
+// else if ( contraseña !== nombre){console.log("contraseña incorrecta")}
+else {alert('dato incorrecto')}
 
 function usuario(nombre){
 for (let i = 0; i < users.length; i++) {
