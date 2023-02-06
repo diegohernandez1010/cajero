@@ -7,20 +7,35 @@
     <link rel="stylesheet" href="STYLE.CSS">
     <title>Cajero</title>
 </head>
-<h1>BIENVENIDO A TU ATM</h1>
+<h1>BIENVENIDO</h1>
 <body>
-    <h2>Usuarios</h2>
-    <div>
-        <!-- <a href=""></a>
-        <button onclick="eligeUsuario()">mali</button>
-        <a href=""></a>
-        <button onclick="">Gera</button>
-        <a href=""></a>
-        <button onclick="">Maui</button> -->
-        <label>mali<br/><input type="password" id="password"></label>
-        <button onclick="usuario()">enviar contraseña</button>
-
+    <!-- ingreso cajero -->
+    <section id="claveUsuario"></section>
+    <h2>Ingrese su Usuario</h2>
+    <h3>A continuación verificaremos sus credenciales</h3>
+    <div >
+        <label>Ingrese su usuario<br/><input type="password" id="ingreseUsuario"></label>
+        <button onclick="validandoUsuario()">validar</button>
     </div>
+    <div>
+        <label>ingrese su contraseña<br/><input type="password" id="password"></label>
+        <button onclick="clave()">validar</button>
+    </div>
+    <!-- ingreso cajero -->
+
+    <section id="opcionesCajero"></section>
+    <h2>¿Qué deseas hacer hoy?</h2>
+                <div class="botonesOpciones">
+                    <button onclick="verSaldo()">Ver saldo</button>
+                    <button onclick="ingresarSaldo ()">Ingresar saldo</button>
+                    <button onclick="retirarSaldo ()">Retirar saldo</button>
+                </div>
+
+
+
+
+
+
     <script src="script.js"></script>
 </body>
 </html>
