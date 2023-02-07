@@ -64,6 +64,16 @@ if(usuarioFinal == cuentas[i].nombre){
         // document.getElementById("Usuario").style.display ="none";
     // document.getElementById("opcionesCajero").style.display = "inherit";
     }
+//     else if (usuarioFinal==usuarioActual){
+//         const correcto = document.createTextNode(`ok`);
+//         const correctoFinal = document.getElementById("correctoUsuario");
+// correctoFinal.innerHTML ="";
+// correctoFinal.appendChild (correcto);
+
+    
+
+
+    
     console.log(typeof usuarioFinal);
 }
 }
@@ -82,11 +92,12 @@ let validacionFinal= parseInt (contraseña);
     // for(let i = 0; i < cuentas.length; i++){
         // if (usuarioActual == cuentas[i].nombre && validacionFinal == cuentas[i].contraseña)
         if (validacionFinal == passwordActual) {
-                                   document.getElementById("clave").style.display = "none";
+                             document.getElementById("clave").style.display = "none";
                        document.getElementById("Usuario").style.display ="none";
             document.getElementById("opcionesCajero").style.display = "inherit";
+
         }else {
-            const resultado = document.createTextNode (`Por favor revise su usuario/contraseña. Intente nuevamente`);
+            const resultado = document.createTextNode (`Por favor revise su Usuario/Contraseña. Intente nuevamente`);
             const numeroFinal = document.getElementById("errorClave");
             numeroFinal.innerHTML = "";
             numeroFinal.appendChild (resultado);
