@@ -55,10 +55,13 @@ console.log("nombre usuario= " + nombre);
 
 }
 function paso(nombre){
-    let= usuarioFinal=(nombre);
+   let usuarioFinal=(nombre);
     for(let i=0; i< cuentas.length; i++){
 if(usuarioFinal == cuentas[i].nombre){
-        document.getElementById("Usuario").style.display ="none";
+    usuarioActual= cuentas[i].nombre
+ passwordActual=cuentas[i].contraseña
+ saldoActual=cuentas[i].saldo
+        // document.getElementById("Usuario").style.display ="none";
     // document.getElementById("opcionesCajero").style.display = "inherit";
     }
     console.log(typeof usuarioFinal);
@@ -75,18 +78,22 @@ function clave(){
 
 //se hace la validación. Si está bien, oculta la pantalla de ingreso de clave y muestra las opciones del cajero.
 function paso2(contraseña){
-let= validacionFinal= parseInt (contraseña);
-    for(let i = 0; i < cuentas.length; i++){
+let validacionFinal= parseInt (contraseña);
+    // for(let i = 0; i < cuentas.length; i++){
         // if (usuarioActual == cuentas[i].nombre && validacionFinal == cuentas[i].contraseña)
-        if (validacionFinal == cuentas[i].contraseña) {
-                       document.getElementById("clave").style.display = "none";
+        if (validacionFinal == passwordActual) {
+                                   document.getElementById("clave").style.display = "none";
+                       document.getElementById("Usuario").style.display ="none";
             document.getElementById("opcionesCajero").style.display = "inherit";
-        break;
-        }
+//         }else {
+//             const resultado = document.createTextNode (`La contraseña está errada. Inténtalo de nuevo`);
         
         }
+    // }
 }
 
+
+//opciones cajero
 
 
 
