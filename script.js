@@ -86,7 +86,7 @@ let validacionFinal= parseInt (contraseña);
                        document.getElementById("Usuario").style.display ="none";
             document.getElementById("opcionesCajero").style.display = "inherit";
         }else {
-            const resultado = document.createTextNode (`La contraseña está errada. Inténtalo de nuevo`);
+            const resultado = document.createTextNode (`Por favor revise su usuario/contraseña. Intente nuevamente`);
             const numeroFinal = document.getElementById("errorClave");
             numeroFinal.innerHTML = "";
             numeroFinal.appendChild (resultado);
