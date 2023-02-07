@@ -42,6 +42,13 @@ function maui(){
     //         document.getElementById("opcionesCajero").style.display = "inherit";
 
 }
+
+//ocultando opciones cajero
+
+function opciones(){
+    document.getElementById("usuario", "clave").style.display = "inherit";
+    document.getElementById("opcionesCajero").style.display = "none";
+}
 //validando usuarios
 
 function validandoUsuario(){
