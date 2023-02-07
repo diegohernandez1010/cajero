@@ -14,14 +14,15 @@
     <h2>Ingrese su Usuario</h2>
     <h3>A continuación verificaremos sus credenciales</h3>
     <div >
-        <label>Ingrese su usuario<br/><input type="password" id="ingreseUsuario"></label>
+        <label>Usuario<br/><input type="password" id="ingreseUsuario" placeholder="ingrese su usuario"></label>
         <button id="boton" onclick="validandoUsuario()">validar</button>
     </div>
     </section>
     <section id ="clave">
     <div>
-        <label>ingrese su contraseña<br/><input type="password" id="password"></label>
+        <label>contraseña<br/><input type="password" id="password" placeholder="Ingrese su contraseña"></label>
         <button id="boton" onclick="clave()">validar</button>
+        <span class="mensajeError" id="errorClave"></span>
     </div>
 </section>
     <!-- ingreso cajero -->

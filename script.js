@@ -4,7 +4,7 @@
 // let contraseña = prompt('ingrese su contraseña')
 
 const cuentas=[
-    { nombre: 'mali', saldo: 200, contraseña: 1 },
+    {nombre: 'mali', saldo: 200, contraseña: 1 },
     { nombre: 'gera', saldo: 290, contraseña: 2 },
     { nombre: 'maui', saldo: 67,  contraseña: 3 }
 ];
@@ -55,7 +55,7 @@ console.log("nombre usuario= " + nombre);
 
 }
 function paso(nombre){
-   let usuarioFinal=(nombre);
+   let usuarioFinal=nombre;
     for(let i=0; i< cuentas.length; i++){
 if(usuarioFinal == cuentas[i].nombre){
     usuarioActual= cuentas[i].nombre
@@ -85,8 +85,14 @@ let validacionFinal= parseInt (contraseña);
                                    document.getElementById("clave").style.display = "none";
                        document.getElementById("Usuario").style.display ="none";
             document.getElementById("opcionesCajero").style.display = "inherit";
-//         }else {
-//             const resultado = document.createTextNode (`La contraseña está errada. Inténtalo de nuevo`);
+        }else {
+            const resultado = document.createTextNode (`La contraseña está errada. Inténtalo de nuevo`);
+            const numeroFinal = document.getElementById("errorClave");
+            numeroFinal.innerHTML = "";
+            numeroFinal.appendChild (resultado);
+
+            
+           
         
         }
     // }
