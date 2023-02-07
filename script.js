@@ -59,7 +59,7 @@ if(usuarioFinal == cuentas[i].nombre){
     document.getElementById("Usuario").style.display = "none";
     document.getElementById("opcionesCajero").style.display = "inherit";
     }
-    console.log(typeof usuarioFinal);
+    // console.log(typeof usuarioFinal);
 }
 }
 //validando contraseñas
@@ -68,7 +68,7 @@ function clave(){
     let contraseña = document.getElementById("password").value;
     paso2 (contraseña);
 
-    // console.log("contraseña= " + contraseña );
+    console.log("contraseña= " + contraseña );
 } 
 
 //se hace la validación. Si está bien, oculta la pantalla de ingreso de clave y muestra las opciones del cajero.
