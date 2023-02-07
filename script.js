@@ -43,11 +43,11 @@ function maui(){
 
 }
 //ocultando opciones cajero
-function ocultarOpciones(){
-    document.getElementById("usuario").style.display = "none";
-    document.getElementById("lave").style.display = "none";
-            document.getElementById("opcionesCajero").style.display = "inherit";
-}
+// function ocultarOpciones(){
+//     document.getElementById("usuario").style.display = "none";
+//     document.getElementById("lave").style.display = "none";
+//             document.getElementById("opcionesCajero").style.display = "inherit";
+// }
 //validando usuarios
 
 function validandoUsuario(){
@@ -62,7 +62,7 @@ function paso(nombre){
     let= usuarioFinal=(nombre);
     for(let i=0; i< cuentas.length; i++){
 if(usuarioFinal == cuentas[i].nombre){
-    document.getElementById("Usuario").style.display = "none";
+    document.getElementById("Usuario").style.display ="none";
     document.getElementById("opcionesCajero").style.display = "inherit";
     }
     // console.log(typeof usuarioFinal);
