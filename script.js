@@ -42,12 +42,9 @@ function maui(){
     //         document.getElementById("opcionesCajero").style.display = "inherit";
 
 }
-//ocultando opciones cajero
-// function ocultarOpciones(){
-//     document.getElementById("usuario").style.display = "none";
-//     document.getElementById("lave").style.display = "none";
-//             document.getElementById("opcionesCajero").style.display = "inherit";
-// }
+// // ocultando opciones cajero
+document.getElementById("opcionesCajero").style.display="none";
+
 //validando usuarios
 
 function validandoUsuario(){
@@ -58,14 +55,13 @@ console.log("nombre usuario= " + nombre);
 
 }
 function paso(nombre){
-
     let= usuarioFinal=(nombre);
     for(let i=0; i< cuentas.length; i++){
 if(usuarioFinal == cuentas[i].nombre){
-    document.getElementById("Usuario").style.display ="none";
-    document.getElementById("opcionesCajero").style.display = "inherit";
+        document.getElementById("Usuario").style.display ="none";
+    // document.getElementById("opcionesCajero").style.display = "inherit";
     }
-    // console.log(typeof usuarioFinal);
+    console.log(typeof usuarioFinal);
 }
 }
 //validando contraseñas
@@ -83,7 +79,7 @@ let= validacionFinal= parseInt (contraseña);
     for(let i = 0; i < cuentas.length; i++){
         // if (usuarioActual == cuentas[i].nombre && validacionFinal == cuentas[i].contraseña)
         if (validacionFinal == cuentas[i].contraseña) {
-            document.getElementById("clave").style.display = "none";
+                       document.getElementById("clave").style.display = "none";
             document.getElementById("opcionesCajero").style.display = "inherit";
         break;
         }
