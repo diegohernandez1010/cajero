@@ -21,8 +21,8 @@ usuarioActual = cuentas[0].nombre;
 saldoActual= cuentas[0].saldo;
 contraseñaActual=cuentas[0].contraseña;
 
-document.getElementById("claveUsuario").style.display = "none";
-            document.getElementById("opcionesCajero").style.display = "inherit";
+// document.getElementById("claveUsuario").style.display = "none";
+//             document.getElementById("opcionesCajero").style.display = "inherit";
 }
 
 
@@ -30,16 +30,16 @@ function gera(){
 usuarioActual= cuentas[1].nombre;
 saldoActual = cuentas[1].saldo;
 contraseñaActual =cuentas[1].contraseña;
-document.getElementById("claveUsuario").style.display = "none";
-            document.getElementById("opcionesCajero").style.display = "inherit";
+// document.getElementById("claveUsuario").style.display = "none";
+//             document.getElementById("opcionesCajero").style.display = "inherit";
 
 }
 function maui(){
     usuarioActual = cuentas[2].nombre;
     saldoActual= cuentas[2].saldo;
     contraseñaActual=cuentas[2].contraseña;
-    document.getElementById("claveUsuario").style.display = "none";
-            document.getElementById("opcionesCajero").style.display = "inherit";
+    // document.getElementById("claveUsuario").style.display = "none";
+    //         document.getElementById("opcionesCajero").style.display = "inherit";
 
 }
 //validando usuarios
@@ -53,14 +53,13 @@ console.log("nombre usuario= " + nombre);
 }
 function paso(nombre){
 
-    let= usuarioFinal=parseInt(nombre);
+    let= usuarioFinal=(nombre);
     for(let i=0; i< cuentas.length; i++){
 if(usuarioFinal == cuentas[i].nombre){
-    document.getElementById("claveUsuario").style.display = "none";
+    document.getElementById("Usuario").style.display = "none";
     document.getElementById("opcionesCajero").style.display = "inherit";
-
-
     }
+    console.log(typeof usuarioFinal);
 }
 }
 //validando contraseñas
@@ -69,7 +68,7 @@ function clave(){
     let contraseña = document.getElementById("password").value;
     paso2 (contraseña);
 
-    console.log("contraseña= " + contraseña );
+    // console.log("contraseña= " + contraseña );
 } 
 
 //se hace la validación. Si está bien, oculta la pantalla de ingreso de clave y muestra las opciones del cajero.
@@ -78,7 +77,7 @@ let= validacionFinal= parseInt (contraseña);
     for(let i = 0; i < cuentas.length; i++){
         // if (usuarioActual == cuentas[i].nombre && validacionFinal == cuentas[i].contraseña)
         if (validacionFinal == cuentas[i].contraseña) {
-            document.getElementById("claveUsuario").style.display = "none";
+            document.getElementById("clave").style.display = "none";
             document.getElementById("opcionesCajero").style.display = "inherit";
         break;
         }
