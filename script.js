@@ -42,12 +42,11 @@ function maui(){
     //         document.getElementById("opcionesCajero").style.display = "inherit";
 
 }
-
 //ocultando opciones cajero
-
-function opciones(){
-    document.getElementById("usuario", "clave").style.display = "inherit";
-    document.getElementById("opcionesCajero").style.display = "none";
+function ocultarOpciones(){
+    document.getElementById("usuario").style.display = "none";
+    document.getElementById("lave").style.display = "none";
+            document.getElementById("opcionesCajero").style.display = "inherit";
 }
 //validando usuarios
 
@@ -89,12 +88,7 @@ let= validacionFinal= parseInt (contraseña);
         break;
         }
         
-    
-
-
-
-    
-    }
+        }
 }
 
 
