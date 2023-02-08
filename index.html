@@ -31,7 +31,7 @@
 
     <section id="opcionesCajero">
     <div>
-        <h2>¿Qué deseas hacer hoy?</h2>
+        <h2>¿Qué desea hacer hoy?</h2>
                 <div class="botonesOpciones">
                     <button onclick="verSaldo()">Ver saldo</button>
                     <button onclick="ingresarSaldo ()">Ingresar saldo</button>
@@ -39,10 +39,24 @@
                 </div>
             </div>
             </section>
+            <!-- OPCIONES CAJERO // VER SALDO -->
+            <section id="verSaldo" class="card">
+                <h2>Su saldo actual es:</h2>
+                <span id="saldoCliente"></span>
+                <div><button class="atras" onclick="atras()">volver</button></div>
+            </section>
+
+            <!-- OPCIONES CAJERO // AGREGAR SALDO -->
+            <section id="agregarSaldo" class="card">
+                <h2>¿Cuánto dinero quiere ingresar?</h2>
+                <div class="saldoDiferente">
+                    <input type="number" id="saldoIngresado" placeholder="Ingresa un monto" />
+                    <button onclick="inputSaldo ()">Ingresar</button>
+                </div>
 
 
 
-
+                </section>
 
     <script src="script.js"></script>
 </body>

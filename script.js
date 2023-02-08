@@ -47,14 +47,14 @@ document.getElementById("opcionesCajero").style.display="none";
 
 //validando usuarios
 
-function validandoUsuario(){
-let nombre = document.getElementById("ingreseUsuario").value;
+function validandoUsuario(){ // este es el boton//
+let nombre = document.getElementById("ingreseUsuario").value;//esto es un input
 paso(nombre);
 
 console.log("nombre usuario= " + nombre);
 
 }
-function paso(nombre){
+function paso(nombre){         //validando informacion en las cuentas//
    let usuarioFinal=nombre;
     for(let i=0; i< cuentas.length; i++){
 if(usuarioFinal == cuentas[i].nombre){
@@ -69,18 +69,15 @@ if(usuarioFinal == cuentas[i].nombre){
 //         const correctoFinal = document.getElementById("correctoUsuario");
 // correctoFinal.innerHTML ="";
 // correctoFinal.appendChild (correcto);
-
-    
-
-
-    
-    console.log(typeof usuarioFinal);
+      console.log(typeof usuarioFinal);
 }
 }
+
+
 //validando contraseñas
 
-function clave(){
-    let contraseña = document.getElementById("password").value;
+function clave(){//este es boton//
+    let contraseña = document.getElementById("password").value;//este es un input//
     paso2 (contraseña);
 
     console.log("contraseña= " + contraseña );
@@ -98,34 +95,41 @@ let validacionFinal= parseInt (contraseña);
 
         }else {
             const resultado = document.createTextNode (`Por favor revise su Usuario/Contraseña. Intente nuevamente`);
-            const numeroFinal = document.getElementById("errorClave");
-            numeroFinal.innerHTML = "";
-            numeroFinal.appendChild (resultado);
-
-            
-           
-        
-        }
+            const resultadoError = document.getElementById("errorClave");
+            resultadoError.innerHTML = "";
+            resultadoError.appendChild (resultado);          
+                }
     // }
 }
 
+//opciones cajero--- ver saldo
 
-//opciones cajero
+document.getElementById("verSaldo").style.display = "none";
+const verSaldo=()=>{//boton
+    const saldoFinal=document.createTextNode (`$${saldoActual}`);
+    const mensajeSaldo = document.getElementById ("saldoCliente");
+    mensajeSaldo.innerHTML = "";
+    mensajeSaldo.appendChild(saldoFinal);
+
+    document.getElementById("opcionesCajero").style.display = "none";
+    document.getElementById("verSaldo").style.display = "inherit";
+}
+
+const atras=()=>{
+    document.getElementById("opcionesCajero").style.display = "inherit";
+    document.getElementById("verSaldo").style.display = "none";
+
+
+}
+
+//opciones cajero--- ver saldo
 
 
 
+// const saldoFinal = (saldoUsuario == saldoActual );
 
-// if (nombre==='mali' || nombre==='gera' || nombre==='maui'){console.log("datos correctos")}
-// if ( nombre=='mali' && contraseña==1 || nombre=='gera'&& contraseña==2 || nombre=='maui' && contraseña==3){console.log("datos correctos")}
-// // else if ( contraseña !== nombre){console.log("contraseña incorrecta")}
-// else {alert('dato incorrecto')}
-
-// function usuario(nombre){
-// for (let i = 0; i < users.length; i++) {
-//     if (users[i].nombre === nombre) {
-//       return i;
-//     }
+//     console.log(saldoFinal)
 // }
-// return -1;
-// }
-// console.log(nombre);
+
+
+

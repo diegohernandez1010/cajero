@@ -8,10 +8,7 @@ h1{
 display: flex;
     flex-direction: column;
 }
-button{
 
-    /* flex-direction: column-reverse; */
-}
 .botonesOpciones{
     display: flex;
     flex-direction: row;
@@ -27,4 +24,14 @@ width: 235px;
 #contra{
 
     display: flex;
+}
+.atras{
+    margin-top: 58px;
+    margin-left: 49vw;
+
+}
+#saldoCliente{
+    margin-top: 10px;
+    margin-left: 50vw;
+
 }
