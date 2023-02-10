@@ -110,7 +110,7 @@ const verSaldo=()=>{//boton
     const mensajeSaldo = document.getElementById ("saldoCliente");
     mensajeSaldo.innerHTML = "";
     mensajeSaldo.appendChild(saldoFinal);
-
+    document.getElementById("verSaldo").style.display = "inherit";
     document.getElementById("opcionesCajero").style.display = "none";
     document.getElementById("verSaldo").style.display = "inherit";
 }
@@ -126,14 +126,59 @@ const cerrarSesion=()=>{
     document.getElementById("Usuario").style.display = "inherit";
     document.getElementById("clave").style.display = "inherit";
 }
+
+const ingresoASaldo=()=>{
+    document.getElementById("agregarSaldo").style.display = "inherit";
+    document.getElementById("opcionesCajero").style.display = "none";
+}    
 //opciones cajero--- agregar saldo
-document.getElementById("agregarSaldo").style.display = "none";
-const ingresarSaldo=()=>{
-const saldoIngresado = document.getElementById("saldoIngresado").value;
-revisaSaldo (saldoIngresado);
-console.log(saldoIngresado);
+// document.getElementById("agregarSaldo").style.display = "none";
+const ingresarSaldo=()=>{//boton//
+const saldoIngresado = document.getElementById("saldoIngresado").value;//input//
+revisaSaldo (saldoIngresado);}
+// console.log(revisaSaldo);
+
+
+const atrasSaldo=()=>{
+    document.getElementById("opcionesCajero").style.display = "inherit";
+    // document.getElementById("agregarSaldo").style.display = "none";
+    
+}
+
+    const revisaSaldo =(saldoIngresado)=> {
+    if ((saldoIngresado + saldoActual) > 990){
+                const mensajeError = document.createTextNode ("Sobrepasa el monto permitido por el banco. Ingresa un valor inferior.");
+        const mensajeUsuario = document.getElementById ("alertaCupo");
+        mensajeUsuario.innerHTML = "";
+        mensajeUsuario.appendChild (mensajeError);
+   
+    }if((saldoIngresado+saldoActual) <990 ){
+        const mensajeOk = document.createTextNode ("Monto a ingresar correcto");
+const nuevoMensaje = document.getElementById ("alertaOk");
+nuevoMensaje.innerHTML="";
+nuevoMensaje.appendChild(mensajeOk);
+
+    }
+    
+    else {
+
+        mostrarTransacción(saldoIngresado, saldoActual);
+    }
+}
+     // Muestra la pantalla con el saldo del cliente
+     document.getElementById("saldoTotal").style.display = "none";
+const mostrarTransacción =(saldoIngresado, saldoActual)=> {
+    // document.getElementById("agregarSaldo").style.display = "none";
+    // document.getElementById("saldoTotal").style.display = "inherit";
+
+    const dineroIngresado = document.createTextNode (`$${saldoIngresado}`);
+    const mostrarDinero = document.getElementById("saldoIngresadoCliente");
+    mostrarDinero.innerHTML = "";
+    mostrarDinero.appendChild (dineroIngresado);
+
 
 }
+
 
 
 // const saldoFinal = (saldoUsuario == saldoActual );

@@ -52,12 +52,19 @@
                 <h2>¿Cuánto dinero quiere ingresar?</h2>
                 <div class="saldoDiferente">
                     <input type="number" id="saldoIngresado" placeholder="Ingresa un monto" />
-                    <button onclick="inputSaldo ()">Ingresar</button>
+                    <button onclick="ingresarSaldo ()">validar</button>
                 </div>
+                <span class="mensajeError" id="alertaCupo"></span>
+                <span class="mensajeError" id="alertaOk"></span>
+                <div><button class="atras" onclick="atrasSaldo()">volver</button></div>
+                        </section>
 
+                
+<!-- OPCIONES CAJERO // AGREGAR SALDO mostrar saldo ingresado-->
+<section id="saldoTotal" class="card">
+    <h2>Acabas de ingresar:</h2>
+    <span id="saldoIngresadoCliente">$</span>
 
-
-                </section>
 
     <script src="script.js"></script>
 </body>
