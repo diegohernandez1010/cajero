@@ -104,7 +104,7 @@ let validacionFinal= parseInt (contraseña);
 
 //opciones cajero--- ver saldo
 
-document.getElementById("verSaldo").style.display = "none";
+document.getElementById("verSaldo").style.display = "none";//ocultar
 const verSaldo=()=>{//boton
     const saldoFinal=document.createTextNode (`$${saldoActual}`);
     const mensajeSaldo = document.getElementById ("saldoCliente");
@@ -121,9 +121,19 @@ const atras=()=>{
 
 
 }
+const cerrarSesion=()=>{
+    document.getElementById("opcionesCajero").style.display = "none";
+    document.getElementById("Usuario").style.display = "inherit";
+    document.getElementById("clave").style.display = "inherit";
+}
+//opciones cajero--- agregar saldo
+document.getElementById("agregarSaldo").style.display = "none";
+const ingresarSaldo=()=>{
+const saldoIngresado = document.getElementById("saldoIngresado").value;
+revisaSaldo (saldoIngresado);
+console.log(saldoIngresado);
 
-//opciones cajero--- ver saldo
-
+}
 
 
 // const saldoFinal = (saldoUsuario == saldoActual );
